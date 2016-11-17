@@ -166,4 +166,26 @@ public class DisplayHoraYFecha
         }
         return mostrar;
     }
+    
+    public String getMomento(boolean fecha2, boolean tiempo2)
+    { 
+        if (fecha2 == true && tiempo2 == true)
+        {
+           mostrar = hora.getDisplayValue() + ":" + minutos.getDisplayValue() + " " + 
+                      dia.getValorDelDisplay() + "/" + mes.getValorDelDisplay() + "/" + anio.getValorDelDisplay();
+        }
+        else if (fecha2 == true && tiempo2 == false)
+        {
+            mostrar = dia.getValorDelDisplay() + "/" + mes.getValorDelDisplay() + "/" + anio.getValorDelDisplay();
+        }
+        else if (fecha2 == false && tiempo2 == true)
+        {
+            mostrar = hora.getDisplayValue() + ":" + minutos.getDisplayValue() + " " ;
+        }
+        else
+        {
+            mostrar = "";
+        }
+        return mostrar;
+    }
 }
